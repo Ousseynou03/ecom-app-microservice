@@ -16,7 +16,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ConnexionComponent } from './connexion/connexion.component';
 import { PanierComponent } from './panier/panier.component';
 import {PanierService} from "./service/panier.service";
-import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 
 @NgModule({
@@ -39,7 +38,6 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
-        ToastrModule.forRoot()
     ],
   providers: [
     PanierService,

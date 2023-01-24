@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PanierService} from "../service/panier.service";
-import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-product',
@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
               private fb: FormBuilder,
               private router : Router, private route: ActivatedRoute,
               private panierService:PanierService,
-              private toastr: ToastrService) { }
+             ) { }
 
   ngOnInit(): void {
     this.searchProductsForm=this.fb.group({
@@ -58,8 +58,6 @@ export class ProductComponent implements OnInit {
   //Ajouter au Panier
   addtocart(prod: any) {
     this.panierService.addToCart(prod);
-    this.toastr.success("Votre produit a bien été ajouté au panier!");
-
   }
 
   //Détails ¨Produit par identifiant
