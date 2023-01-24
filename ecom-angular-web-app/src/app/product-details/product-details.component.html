@@ -1,0 +1,25 @@
+<section class="ftco-section">
+  <div class="container" *ngFor="let pi of products._embedded.products">
+    <div class="row">
+      <div class="col-lg-6 ftco-animate">
+        <h3 class="text-center">{{pi.products.name}}</h3>
+        <a class="image-popup"><img src="" class="img-fluid" alt="Burgure details produit"></a>
+      </div>
+      <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+        <p><a href="" class="btn btn-black py-3 px-5" style="width:318px">Ajouter au panier</a></p>
+
+        <h3 class="price-sale" style="margin-left:20px"><strong>3500</strong> Fcfa/kg</h3>
+        <div class="row mt-4"><div class="w-100"></div></div>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-lg-6 mb-5 ftco-animate" style="">
+        <div class="tag-widget post-tag-container text-center">
+          <div class="tagcloud">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

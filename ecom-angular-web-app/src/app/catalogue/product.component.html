@@ -1,0 +1,31 @@
+<header>
+  <h1>Burgure,</h1>
+  <h4>LE MEILLEUR RESTAURANT DE BURGER.</h4>
+  <button>Visiter nos produits</button>
+</header>
+
+<div class="container" id="main-container">
+  <div class="row">
+    <div *ngFor="let prod of products._embedded.products" class="col-md-6 col-xl-3">
+      <div class="card m-b-30">
+        <div class="card-body row">
+          <div class="col-6">
+            <a><img src="{{prod?.imageUrl}}" alt=""  class="img-fluid rounded-circle w-500"></a>
+          </div>
+          <div class="col-6 card-title align-self-center mb-0">
+            <h5>{{prod?.name}}</h5>
+            <p class="m-0">Price : <span style="color: green; font-weight: bold;">{{prod.price}}Dh</span></p>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <p class="m-0"> <span style="color: black; font-weight: bold;"> Description : {{prod.description}}</span></p>
+          <button  class="btn btn-dark" (click)="addtocart(prod)" >Ajouter au Panier</button>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
+
+

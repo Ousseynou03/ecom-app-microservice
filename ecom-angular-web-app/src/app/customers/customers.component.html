@@ -1,0 +1,29 @@
+<div class="container">
+  <form [formGroup]="searchCustomerForm" (ngSubmit)="searchCustomers()">
+    <div class="input-group input-group-sm">
+      <label class="input-group-text">Keyword</label>
+      <input class="form-control" type="text" formControlName="keyword">
+      <button class="btn btn-dark">Search</button>
+    </div>
+  </form>
+  <table class="table" *ngIf="customers">
+    <thead>
+     <tr>
+       <th>ID</th><th>Name</th><th>Email</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of customers._embedded.customers">
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>
+          <button (click)="handleGetBills(c.id)" class="btn btn-dark">Bills</button>
+        </td>
+        <td>
+          <button (click)="handleGetOrders(c.id)" class="btn btn-dark">Orders</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

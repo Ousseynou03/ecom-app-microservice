@@ -1,0 +1,72 @@
+.container {
+  margin-top: 30px;
+}
+.card {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('https://i.ibb.co/4d8CYtM/background-header.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 40px;
+  height: 500px;
+
+}
+header h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+header h4{
+  margin-top: -20px;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+}
+header button{
+  padding: 10px 20px;
+  background-color: #fff;
+  color:#000;
+  border:none;
+  margin-bottom: 30px;
+  outline:none;
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  cursor: pointer;
+}
+
+.main{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .content .card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom:20px;
+}
+.main .content .card .left{
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color:black;
+  color:#fff;
+}
+.main .content .card .right img{
+  height:300px;
+  width: 400px;
+  margin-top: 5px;
+}
+
+
+

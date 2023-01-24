@@ -1,0 +1,45 @@
+<div class="container" *ngIf="orderService">
+  <div class="row mt-2">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Order number : {{orderServiceId}}</div>
+        <div class="card-body">
+          <ul class="list-group small">
+            <li class="list-group-item">Order ID : {{orderService.id}}</li>
+            <li class="list-group-item">Order Date : {{orderService.createdAt | date:'yyyy/MM/dd'}}</li>
+            <li class="list-group-item">Customer ID : {{orderService.customer.id}}</li>
+            <li class="list-group-item">Customer Name : {{orderService.customer.name}}</li>
+            <li class="list-group-item">Customer Email : {{orderService.customer.email}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">Products</div>
+        <div class="card-body">
+          <table class="table table-sm table-striped">
+            <thead class="bg-dark text-white">
+            <th>Product ID</th><th>Product Name</th><th>Price</th>
+            <th>Quantity</th><th>Amount</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let pi of orderService.productItems">
+              <td>{{pi.product.id}}</td>
+              <td>{{pi.product.name}}</td>
+              <td class="text-end">{{pi.price|number : '.2'}}</td>
+              <td class="text-end">{{pi.quantity}}</td>
+              <td class="text-end">{{pi.amount|number : '.2'}}</td>
+            </tr>
+            <tr class="bg-dark text-white">
+              <td colspan="4">Total</td>
+              <td class="text-end">{{orderService.total|number : '.2'}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

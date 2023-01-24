@@ -1,0 +1,49 @@
+<nav [ngStyle]="navbg">
+  <h1>Burgure</h1>
+  <div class="onglets">
+    <a routerLink="/catalogue">Home</a>
+    <a routerLink="/catalogue">Produits</a>
+    <a routerLink="/products">Nos produits</a>
+    <a routerLink="/customers">Nos Clients</a>
+    <a href="#contact">Contact</a>
+    <a href="">A Propos</a>
+    <a routerLink="/panier"><span  class="badge bg-danger">{{totalItem}}</span>Panier</a>
+    <a routerLink="/connexion">Connexion</a>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>
+
+<footer>
+
+  <h1>Nos services</h1>
+  <div class="services">
+
+    <div class="service">
+      <h3>Livraison gratuite</h3>
+      <p>La livraison est gratuite partout à Casablanca</p>
+    </div>
+
+    <div class="service">
+      <h3>A Propos</h3>
+      <p>Burgure est spécialisé dans la vente de burgure délicieux au goût unique.</p>
+    </div>
+
+    <div class="service">
+      <h3>Aimé ou remboursé</h3>
+      <p>Afin de garanrir la qualité de nos burgures, soient ils sont aimés ou remboursés.
+        N'hésitez pas à faire votre commande.</p>
+    </div>
+
+    <div class="service">
+      <h3>Contact</h3>
+      <p>Email: o.dione@mundiapolis.ma</p>
+      <p>Phone: 0705443903</p>
+    </div>
+
+  </div>
+
+  <p id="contact">Contact : 07 05 44 39 03 | &copy; 2023, Burgure.</p>
+</footer>
