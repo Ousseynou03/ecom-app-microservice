@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,10 +17,26 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { PanierComponent } from './panier/panier.component';
 import {PanierService} from "./service/panier.service";
 import { CheckoutComponent } from './checkout/checkout.component';
-import {KeycloakAngularModule} from "keycloak-angular";
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 
-
-
+export function kcFactory(kcService : KeycloakService){
+  return ()=>{
+    //Initialisation de keycloak avec les options suivantes
+    kcService.init({
+        config : {
+          realm : "ecom-app-microservice-realm",
+          clientId : "ecom-client",
+          url : "http://localhost:8080"
+        },
+        initOptions : {
+           onLoad : "login-required", //=> nécessite l'authentification avant même la navigation
+         // onLoad : "check-sso", //L'utilisateur peut commencer à naviguer dans la page d'accueil sans authentification
+          checkLoginIframe : true
+        }
+      }
+    )
+  }
+}
 
 @NgModule({
   declarations: [
@@ -47,6 +63,11 @@ import {KeycloakAngularModule} from "keycloak-angular";
         KeycloakAngularModule,
     ],
   providers: [
+    {
+      provide : APP_INITIALIZER,
+      deps : [KeycloakService],
+      useFactory : kcFactory,
+      multi : true},
     PanierService,
   ],
   bootstrap: [AppComponent]
