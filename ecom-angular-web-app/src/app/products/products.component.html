@@ -3,22 +3,23 @@
     <div class="input-group input-group-sm">
       <label class="input-group-text">Keyword</label>
       <input class="form-control" type="text" formControlName="keyword">
-      <button class="btn btn-primary">Search</button>
+      <button class="btn btn-dark">Search</button>
     </div>
   </form>
   <form [formGroup]="productFormGroup" (ngSubmit)="addProduct()">
   <table class="table" >
     <thead>
     <tr>
-      <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th>
+      <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th><th>Image</th>
     </tr>
     <tr>
         <td></td>
         <td><input type="text" formControlName="name"></td>
         <td><input type="text" formControlName="price"></td>
         <td><input type="text" formControlName="quantity"></td>
+      <td><input type="text" formControlName="imageUrl"></td>
         <td>
-          <button class="btn btn-primary" (click)="addProduct()">Add</button>
+          <button class="btn btn-dark" (click)="addProduct()">Add</button>
         </td>
     </tr>
     </thead>
@@ -28,6 +29,7 @@
       <td>{{p.name}}</td>
       <td>{{p.price}}</td>
       <td>{{p.quantity}}</td>
+
     </tr>
     </tbody>
   </table>

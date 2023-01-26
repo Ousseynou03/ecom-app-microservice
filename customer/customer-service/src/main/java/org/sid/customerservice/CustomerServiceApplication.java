@@ -23,10 +23,10 @@ public class CustomerServiceApplication {
     CommandLineRunner start(CustomerRepository customerRepository){
         return args -> {
             List.of(
-                    Customer.builder().name("Dione").email("dioneousseynou03@gmail.com").build(),
-                    Customer.builder().name("Ousseynou").email("ouzin03@gmail.com").build(),
-                    Customer.builder().name("Weuz").email("weuz03@gmail.com").build(),
-                    Customer.builder().name("Ouzin").email("ouzin03@gmail.com").build()
+                    Customer.builder().name("Dione").email("dioneousseynou03@gmail.com").phoneNum("0705443903").address("Casa, Sidi Maarouf").build(),
+                    Customer.builder().name("Ousseynou").email("ouzin03@gmail.com").phoneNum("0705446703").address("Casa, 2Mars").build(),
+                    Customer.builder().name("Weuz").email("weuz03@gmail.com").phoneNum("0705443998").address("Casa,Maariif").build(),
+                    Customer.builder().name("Ouzin").email("ouzin03@gmail.com").phoneNum("0705563903").address("Rabat,Salé").build()
             ).forEach(customer -> {
                 customerRepository.save(customer);
             });

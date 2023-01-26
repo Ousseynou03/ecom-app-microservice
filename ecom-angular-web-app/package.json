@@ -21,6 +21,8 @@
     "@angular/router": "^14.0.0",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.3",
+    "keycloak-angular": "^13.0.0",
+    "keycloak-js": "^20.0.3",
     "ngx-toastr": "^16.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

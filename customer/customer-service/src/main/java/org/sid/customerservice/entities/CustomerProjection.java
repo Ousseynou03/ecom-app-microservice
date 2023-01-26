@@ -7,4 +7,6 @@ public interface CustomerProjection {
     Long getId();
     String getName();
     String getEmail();
+    String getAddress();
+    String getPhoneNum();
 }

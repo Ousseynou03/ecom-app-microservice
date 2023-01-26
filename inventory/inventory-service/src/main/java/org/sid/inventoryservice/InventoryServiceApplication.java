@@ -26,6 +26,8 @@ public class InventoryServiceApplication {
                 productRepository.save(Product.builder().name("Burgure Frite "+i).quantity(34).price(27).description("Burgure frite").imageUrl("https://i.ibb.co/WWnjDdG/burger1.jpg").price(54300).build());
                 productRepository.save(Product.builder().name("Burgure salade "+i).quantity(11).price(50).description("Burgure salade").imageUrl("https://i.ibb.co/LS2T9sD/burger2.jpg").build());
                 productRepository.save(Product.builder().name("Burgure "+i).quantity(13).price(25).description("Burgure").imageUrl("https://i.ibb.co/LS2T9sD/burger2.jpg").build());
+                productRepository.save(Product.builder().name("Chawarma "+i).quantity(10).price(30).description("Burgure").imageUrl("https://i0.wp.com/www.lesdelicesdejessy.com/wp-content/uploads/2019/10/profil.jpg?fit=1060%2C707&ssl=1").build());
+
             }
         };
     }

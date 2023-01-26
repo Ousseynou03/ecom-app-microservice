@@ -20,13 +20,16 @@ export class ProductsComponent implements OnInit {
     this.productFormGroup=this.fb.group({
       "name" : this.fb.control(''),
       "price":this.fb.control(0),
-      "quantity":this.fb.control(0)
+      "quantity":this.fb.control(0),
+      "imageUrl":this.fb.control(0)
 
 
     });
     this.searchProductsForm=this.fb.group({
       keyword : this.fb.control('')
     });
+
+    //http://localhost:8888/INVENTORY-SERVICE/products?projection=p1
 
     //Récupération de tous les produits
     this.http.get("http://localhost:8888/INVENTORY-SERVICE/products?projection=p1")

@@ -10,10 +10,14 @@ import {ProductComponent} from "./catalogue/product.component";
 import {ConnexionComponent} from "./connexion/connexion.component";
 import {ProductDetailsComponent} from "./product-details/product-details.component";
 import {PanierComponent} from "./panier/panier.component";
+import {CheckoutComponent} from "./checkout/checkout.component";
 
 
 const routes: Routes = [
 
+  {
+    path : "", component : ProductComponent,
+  },
   {
     path : "panier", component : PanierComponent,
   },
@@ -47,6 +51,9 @@ const routes: Routes = [
   {
     path : "product", component : ProductComponent
   },
+  {
+    path : "checkout", component :CheckoutComponent,
+  }
 ];
 
 @NgModule({

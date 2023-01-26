@@ -28,6 +28,8 @@ public class OrderRestController {
         this.inventoryRestClient = inventoryRestClient;
     }
 
+
+    //@PreAuthorize("hasAnyAuthority('ADMIN')")
     @GetMapping("/fullOrder/{id}")
     public OrderService getOrderService(@PathVariable Long id){
         OrderService orderService=orderServiceRepository.findById(id).get();

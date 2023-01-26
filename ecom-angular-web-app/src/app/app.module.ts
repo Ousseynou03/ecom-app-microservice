@@ -16,6 +16,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ConnexionComponent } from './connexion/connexion.component';
 import { PanierComponent } from './panier/panier.component';
 import {PanierService} from "./service/panier.service";
+import { CheckoutComponent } from './checkout/checkout.component';
+import {KeycloakAngularModule} from "keycloak-angular";
+
+
 
 
 @NgModule({
@@ -31,6 +35,8 @@ import {PanierService} from "./service/panier.service";
     ProductDetailsComponent,
     ConnexionComponent,
     PanierComponent,
+    CheckoutComponent,
+
   ],
     imports: [
         BrowserModule,
@@ -38,6 +44,7 @@ import {PanierService} from "./service/panier.service";
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
+        KeycloakAngularModule,
     ],
   providers: [
     PanierService,
