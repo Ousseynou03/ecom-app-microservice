@@ -1,8 +1,7 @@
-package org.sid.gatewayservice.configuration;
+package org.sid.customerservice.config;
 
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
-import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -36,4 +35,3 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
                 .anyRequest().authenticated();
     }
 }
-

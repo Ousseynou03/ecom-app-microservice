@@ -1,4 +1,4 @@
-package org.sid.gatewayservice.configuration;
+package org.sid.customerservice.config;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.springframework.context.annotation.Bean;

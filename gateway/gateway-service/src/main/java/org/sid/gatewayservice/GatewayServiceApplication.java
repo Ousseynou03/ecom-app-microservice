@@ -24,10 +24,10 @@ public class GatewayServiceApplication {
     }
 
 
-    @Bean
+   /* @Bean
     public ServerCodecConfigurer serverCodecConfigurer() {
         return ServerCodecConfigurer.create();
-    }
+    }*/
 
 
 
