@@ -29,7 +29,7 @@ public class OrderRestController {
     }
 
 
-    //@PreAuthorize("hasAnyAuthority('ADMIN')")
+
     @GetMapping("/fullOrder/{id}")
     public OrderService getOrderService(@PathVariable Long id){
         OrderService orderService=orderServiceRepository.findById(id).get();

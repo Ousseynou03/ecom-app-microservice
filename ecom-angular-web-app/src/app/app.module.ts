@@ -29,8 +29,8 @@ export function kcFactory(kcService : KeycloakService){
           url : "http://localhost:8080"
         },
         initOptions : {
-           onLoad : "login-required", //=> nécessite l'authentification avant même la navigation
-         // onLoad : "check-sso", //L'utilisateur peut commencer à naviguer dans la page d'accueil sans authentification
+          //onLoad : "login-required", //=> nécessite l'authentification avant même la navigation
+          onLoad : "check-sso", //L'utilisateur peut commencer à naviguer dans la page d'accueil sans authentification
           checkLoginIframe : true
         }
       }

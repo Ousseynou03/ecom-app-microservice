@@ -25,8 +25,9 @@ public class CustomerServiceApplication {
             List.of(
                     Customer.builder().name("Dione").email("dioneousseynou03@gmail.com").phoneNum("0705443903").address("Casa, Sidi Maarouf").build(),
                     Customer.builder().name("Ousseynou").email("ouzin03@gmail.com").phoneNum("0705446703").address("Casa, 2Mars").build(),
-                    Customer.builder().name("Weuz").email("weuz03@gmail.com").phoneNum("0705443998").address("Casa,Maariif").build(),
-                    Customer.builder().name("Ouzin").email("ouzin03@gmail.com").phoneNum("0705563903").address("Rabat,Salé").build()
+                    Customer.builder().name("Saad").email("saad@gmail.com").phoneNum("0705443998").address("Casa,Maariif").build(),
+                    Customer.builder().name("Reda").email("reda@gmail.com").phoneNum("0705563903").address("Berrechid").build(),
+                    Customer.builder().name("Jad").email("jad@gmail.com").phoneNum("0705532903").address("Rabat").build()
             ).forEach(customer -> {
                 customerRepository.save(customer);
             });
